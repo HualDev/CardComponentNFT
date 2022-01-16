@@ -1,0 +1,187 @@
+:root{
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --veryDarkBlueMain: hsl(217, 54%, 11%);
+    --veryDarkBlueCard: hsl(216, 50%, 16%);
+    --veryDarkBlueLine: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 750px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--veryDarkBlueMain);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main{
+    background-color: var(--veryDarkBlueCard);
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    padding: 50px auto; 
+}
+
+.imagen{
+    position: relative;
+}
+
+.imagen:hover span{
+    opacity: 0.7;
+}
+
+.imagen span {
+    background-color: hsl(178, 100%, 50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 82%;
+	height: 92%;
+	display: flex;
+	opacity: 0;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	}
+
+.imagen span img {
+    width: 50px;
+    height: 50px;
+}
+
+.imagen img{
+    width: 90%;
+    height: 90%;
+    display: grid;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 20px; 
+    z-index: -1;  
+}
+
+
+
+h1{
+    color: var(--white);
+    font-size: 22px;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.equi:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+p{
+    color: var(--softBlue);
+    padding: 0 20px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.dates{
+    display: flex;
+    justify-content:space-between;
+    padding: 20px 20px 10px;
+}
+
+.left p{
+    display: inline;
+    color: var(--cyan);
+    padding: 0 0 0 5px;
+}
+
+.right p{
+    display: inline;
+    padding: 0 0 0 5px;
+}
+
+hr{
+    border-color: var(--veryDarkBlueLine);
+}
+
+.autor{
+    padding: 20px;
+}
+
+.autor img{
+    width: 50px;
+    height: 50px;
+    border: solid 2px white;
+    border-radius: 50px;
+    margin: 0 10px 0 0;
+}
+
+.autor p{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 50px;
+    font-size: 16px;
+    padding: 0 0 20px;
+}
+
+.name{
+    display: inline;
+    position: relative;
+    bottom: 20px;
+}
+
+.jules{
+    color: var(--white);    
+}
+
+.jules:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+@media(min-width:600px){
+    body{
+        height: 650px;
+    }
+    main{
+        width: 20%;
+    }
+
+    
+
+    h1{
+        font-size: 14px;
+        padding: 0 20px 10px;
+    }
+
+    p{
+        font-size: 12px;
+    }
+
+    .autor{
+        padding: 10px;
+    }
+
+    .autor img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .autor p{
+        font-size: 12px;
+    }
+
+    .name{
+        bottom: 15px;
+    }
+}
